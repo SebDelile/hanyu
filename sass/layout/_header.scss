@@ -9,6 +9,7 @@
     padding: 2rem 0;
   }
   &__title {
+    font-family: 'Noto Serif SC', serif;
     font-size: 4rem;
     font-weight: 700;
     color: black;
@@ -21,7 +22,7 @@
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      width: 2 * $width-button + (2 - 1) * 2.5rem;
+      width: 3 * $width-button + (3 - 1) * 2.5rem;
       height: 4rem;
     }
     &__button {

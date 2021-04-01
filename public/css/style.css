@@ -39,15 +39,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.header__title, .card__sinogram, .card__example {
-  font-family: "Noto Serif SC", serif;
-}
-
 input, button {
   font: inherit;
 }
 
-.card {
+.tile {
   border: 1px solid black;
   border-radius: 4px;
   display: flex;
@@ -55,38 +51,59 @@ input, button {
   justify-content: space-between;
   align-items: center;
   background-color: #EEE;
-  padding: 1rem 0;
+  padding-bottom: 1rem;
   transition: box-shadow 0.25s;
   cursor: pointer;
 }
-.card:hover, .card:focus {
+.tile:hover, .tile:focus {
   outline: none;
   box-shadow: 0 0 0.375rem 0.125rem black;
 }
-.card__grid {
+.tile__grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   gap: 1rem;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
-.card__code {
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: #999;
-  line-height: 0.8;
+@media only screen and (max-width: 84rem) {
+  .tile__grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
 }
-.card__sinogram {
-  font-size: 6rem;
+@media only screen and (max-width: 84rem) and (max-width: 62rem) {
+  .tile__grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media only screen and (max-width: 84rem) and (max-width: 62rem) and (max-width: 50rem) {
+  .tile__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (max-width: 84rem) and (max-width: 62rem) and (max-width: 50rem) and (max-width: 35rem) {
+  .tile__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 84rem) and (max-width: 62rem) and (max-width: 50rem) and (max-width: 35rem) and (max-width: 24rem) {
+  .tile__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.tile__sinogram {
+  font-family: "Noto Serif SC", serif;
+  font-size: 4.5rem;
   font-weight: 400;
   color: #222;
 }
-.card__pinyin {
-  font-size: 2.5rem;
+.tile__pinyin {
+  font-size: 1.5rem;
   font-weight: 700;
   color: #222;
 }
-.card__example {
-  font-size: 2rem;
+.tile__example {
+  font-family: "Noto Serif SC", serif;
+  font-size: 1.25rem;
   font-weight: 400;
   color: #555;
 }
@@ -103,6 +120,7 @@ input, button {
   padding: 2rem 0;
 }
 .header__title {
+  font-family: "Noto Serif SC", serif;
   font-size: 4rem;
   font-weight: 700;
   color: black;
@@ -117,7 +135,7 @@ input, button {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 32.5rem;
+  width: 50rem;
   height: 4rem;
 }
 .header__test__button {

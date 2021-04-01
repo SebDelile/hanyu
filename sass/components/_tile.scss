@@ -1,0 +1,50 @@
+.tile {
+  border: 1px solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-card;
+  padding-bottom: 1rem;
+  @include boxshadow;
+  cursor: pointer;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+    padding: 1.5rem 0;
+    @media only screen and (max-width: 84rem) {
+      grid-template-columns: repeat(8, 1fr);
+      @media only screen and (max-width: 62rem) {
+        grid-template-columns: repeat(6, 1fr);
+        @media only screen and (max-width: 50rem) {
+          grid-template-columns: repeat(4, 1fr);
+          @media only screen and (max-width: 35rem) {
+            grid-template-columns: repeat(3, 1fr);
+            @media only screen and (max-width: 24rem) {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__sinogram {
+    font-family: "Noto Serif SC", serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    color: $color-font-dark;
+  }
+  &__pinyin {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-font-dark;
+  }
+  &__example {
+    font-family: "Noto Serif SC", serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $color-font;
+  }
+}
