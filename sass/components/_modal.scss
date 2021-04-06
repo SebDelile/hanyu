@@ -1,0 +1,44 @@
+.modal {
+  display: flex;
+  opacity: 0;
+  z-index: -100;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: auto;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $color-blur;
+  overflow: hidden;
+  border: none;
+  > * {
+    position: relative; //to place the close button
+  }
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    @include dropshadow;
+    img {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+  /*Group of classes added via javascript*/
+  &--OFF {
+    animation: fade-out 400ms 100ms both;
+    >* {
+      animation: shift-out 500ms both;
+    }
+  }
+  &--ON {
+    animation: fade-in 400ms both;
+    >* {
+      animation: shift-in 500ms both;
+    }
+  }
+}

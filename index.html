@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <title>学习汉语 - accueil</title>
+  </head>
+  <body>
+    <header class="header">
+        <div class="header__wrapper container">
+          <h1 class="header__title"><a href="index.html">学习汉语</a></h1>
+          <button class="header__burger" type="button" aria-haspopup="true">
+            <div class="header__burger__icon"></div>
+            <div class="header__burger__icon"></div>
+            <div class="header__burger__icon"></div>
+          </button>
+      </div>
+    </header>
+<nav class="nav">
+    <ul class="nav__dropdown container" aria-hidden="true">
+      <li class="nav__dropdown__li"><button class="nav__dropdown__button button" type="button">Test de lecture</button></li>
+      <li class="nav__dropdown__li"><button class="nav__dropdown__button button" type="button">Test d'écriture</button></li>
+      <li class="nav__dropdown__li"><button class="nav__dropdown__button button" type="button">Test de tons</button></li>
+      <li class="nav__dropdown__li"><button class="nav__dropdown__button button" id="button__import" type="button">Importer hanzi</button></li>
+      <li class="nav__dropdown__li"><button class="nav__dropdown__button button" id="button__exportDatabase" type="button">Exporter la DB</button></li>
+    </ul>
+  </nav>
+
+    <main class="container tile__grid">
+      <h2 class="tile__grid__title sr-only">Liste des mots</h2>
+    </main>
+    <dialog class="modal import__modal">
+      <form class="import__form">
+        <div class="import__head">
+          <h3 class="import__head__title">Import d'un caractère dans la base de données</h3>
+        </div>
+        <div class="import__grid">
+          <label class="import__label" for="import__code">Code</label>
+          <input class="import__input" type="text" id="import__code" name="code" required />
+          <label class="import__label" for="import__hanzi">Sinogramme</label>
+          <input class="import__input" type="text" id="import__hanzi" name="sinogram" required maxlength="1" />
+          <label class="import__label" for="import__pinyin">Pinyin</label>
+          <input class="import__input" type="text" id="import__pinyin" name="pinyin" required maxlength="5" />
+          <label class="import__label" for="import__tone">Ton</label>
+          <input class="import__input" type="number" id="import__tone" name="tone" required min="0" max="4" />
+          <label class="import__label" for="import__example">Exemple</label>
+          <input class="import__input" type="text" id="import__example" name="example" required maxlength="4" />
+          <label class="import__label" for="import__status">Ecriture</label>
+          <input class="import__checkbox" type="checkbox" id="import__status" name="status" value="w" checked />
+          <div class="tile import__preview">
+            <h3 class="tile__sinogram">我</h3>
+            <p class="tile__pinyin">wǒ</p>
+            <p class="tile__example">我爱你</p>
+          </div>
+        </div>
+        <button class="import__submit button" type="submit">Importer</button>
+        <button class="modal__close import__close" type="button"><img src="./public/img/icon/close.svg" alt="fermer modale" /></button>
+      </form>
+    </dialog>
+    <footer class="footer">
+      
+    </footer>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

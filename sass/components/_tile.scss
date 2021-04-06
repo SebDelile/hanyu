@@ -1,0 +1,55 @@
+.tile {
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-tile;
+  padding: 1rem 0;
+  @include boxshadow;
+  cursor: pointer;
+  position : relative;
+  &--readonly {
+    background-color: $color-tile-alt;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+    padding: 1.5rem 0;
+    @media only screen and (max-width: 84rem) {
+      grid-template-columns: repeat(8, 1fr);
+      @media only screen and (max-width: 62rem) {
+        grid-template-columns: repeat(6, 1fr);
+        @media only screen and (max-width: 50rem) {
+          grid-template-columns: repeat(4, 1fr);
+          @media only screen and (max-width: 35rem) {
+            grid-template-columns: repeat(3, 1fr);
+            @media only screen and (max-width: 24rem) {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__sinogram {
+    font-family: "simkai", "Noto Serif SC", serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    color: $color-font-dark;
+    line-height: 1;
+  }
+  &__pinyin {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-font-dark;
+  }
+  &__example {
+    font-family: "Noto Serif SC", serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $color-font;
+  }
+}

@@ -1,0 +1,8 @@
+.button {
+  padding: 0.5rem 1.5rem;
+  background-color: $color-tile;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  @include insetboxshadow;
+}

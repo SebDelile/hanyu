@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    line-height: 1.5;
+}
+
+body {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 17rem;
+    background-color: $color-background;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+
+/*Used to hide text for users except screen-reader users*/
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  .hidden {
+    display:none;
+  }
