@@ -1,5 +1,10 @@
-- mettre un signe distinctif visuel entre status R et W
-- faire le responsive du header
+v mettre un signe distinctif visuel entre status R et W
+v faire le responsive du header
 - afficher un total quelque part
 - continuer l'import des caractères
-- ecrire une fonction pour trier le tableau et afficher les erreurs 
+v ecrire une fonction pour trier le tableau et afficher les erreurs
+v ecrire une fonction d'import
+- fonction de recherche par code, pinyin ou caractères 
+- gérer affichage sur plusieurs pages
+- faire les programmes de test
+- transformer example en pinyin

@@ -4,11 +4,13 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    line-height: 1.5;
 }
 
 body {
     box-sizing: border-box;
     width: 100%;
+    min-width: 17rem;
     background-color: $color-background;
 }
 
@@ -16,6 +18,12 @@ a {
     color: inherit;
     text-decoration: none;
     cursor: pointer;
+}
+
+button {
+    background-color: inherit;
+    cursor: pointer;
+    border: none;
 }
 
 

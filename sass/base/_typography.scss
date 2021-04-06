@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'simkai';
+  src: url('../font/simkai.ttf');
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Noto sans SC', sans-serif;
 }
 
 input, button {
